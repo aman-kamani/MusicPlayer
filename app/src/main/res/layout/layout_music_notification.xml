@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"  android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/noti_song_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="Song Name">
+        <requestFocus />
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/noti_song_previous"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="#ffffff"
+            android:tint="@color/colorAccent"/>
+        <ImageButton
+            android:id="@+id/noti_song_play_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:src="@android:drawable/ic_media_play"
+            android:background="#ffffff"
+            android:tint="@color/colorAccent"/>
+        <ImageButton
+            android:id="@+id/noti_song_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:src="@android:drawable/ic_media_next"
+            android:background="#ffffff"
+            android:tint="@color/colorAccent"/>
+    </LinearLayout>
+
+</LinearLayout>

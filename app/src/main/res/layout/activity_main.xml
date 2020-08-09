@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/musiclist"
+        style="@style/JB.layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85" />
+
+    <LinearLayout
+        style="@style/JB.layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="15"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="27"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <SeekBar
+                android:id="@+id/sb_song_progress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="85"
+                android:progressTint="#007BFF"
+                android:thumb="@drawable/ic_directions_bike_black_24dp"
+                android:thumbTint="#007BFF" />
+
+            <TextView
+                android:id="@+id/tv_current_song_duration"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center"
+                android:text="00:00"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="73"
+            android:gravity="center"
+            android:weightSum="100">
+
+            <ImageView
+                android:id="@+id/iv_song_queue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:src="@drawable/ic_queue_music_blue_24dp"
+                android:tint="#007BFF" />
+
+            <TextView
+                android:id="@+id/tv_current_song"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="61"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+
+                android:text="Queue Is Empty"
+                android:tag="nosong"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="#007BFF" />
+
+            <ImageView
+                android:id="@+id/iv_play_pause"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:scaleType="fitXY"
+                android:src="@android:drawable/ic_media_play"
+                android:tag="PLAY"
+                android:tint="#007BFF" />
+
+            <ImageView
+                android:id="@+id/iv_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:src="@android:drawable/ic_media_next"
+                android:tint="#007BFF" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
